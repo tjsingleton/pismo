@@ -126,7 +126,7 @@ class ImageExtractor
           if prev_sibling = node.previous_sibling
             check_for_large_images prev_sibling, parent_depth, sibling_depth + 1
           else
-            check_for_large_images(node.parent, parent_depth + 1, sibling_depth)
+            check_for_large_images(node.parent, parent_depth + 1, sibling_depth) unless node == doc
           end
         end
       else
